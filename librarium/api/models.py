@@ -1,17 +1,7 @@
 from django.db import models
 # from django.conf.settings import AUTH_USER_MODEL as User
 
-
-class TimeStampedModel(models.Model):
-    created = models.DateTimeField(
-        auto_now_add=True
-    )
-    updated = models.DateTimeField(
-        auto_now=True
-    )
-
-    class Meta:
-        abstract = True
+from model_utils.models import TimeStampedModel
 
 
 class Author(TimeStampedModel):
