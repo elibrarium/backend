@@ -1,0 +1,228 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2019-04-02T12:39:31.969Z",
+	"__export_source": "insomnia.desktop.app:v6.3.2",
+	"resources": [
+		{
+			"_id": "wrk_129aba7c254f4347a598ed03de74ef94",
+			"created": 1554206800920,
+			"description": "",
+			"modified": 1554206800920,
+			"name": "librarium",
+			"parentId": null,
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_32501ba47264419c829a6c1d3e8fe73b",
+			"color": null,
+			"created": 1554206800959,
+			"data": {
+				"host": "127.0.0.1"
+			},
+			"isPrivate": false,
+			"metaSortKey": 1554206800959,
+			"modified": 1554207094065,
+			"name": "New Environment",
+			"parentId": "wrk_129aba7c254f4347a598ed03de74ef94",
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_a8572176fe2d4bbca11ce4def7572bff",
+			"cookies": [],
+			"created": 1554206800966,
+			"modified": 1554206800966,
+			"name": "Default Jar",
+			"parentId": "wrk_129aba7c254f4347a598ed03de74ef94",
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "fld_3240de0d0f144efb8464f15c7a56fa55",
+			"created": 1554206830240,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1554206830240,
+			"modified": 1554206830240,
+			"name": "Books",
+			"parentId": "wrk_129aba7c254f4347a598ed03de74ef94",
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_c3162e3e1eea43c7974fc1894126fa42",
+			"created": 1554206842222,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1554206842222,
+			"modified": 1554206842222,
+			"name": "Publshers",
+			"parentId": "wrk_129aba7c254f4347a598ed03de74ef94",
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_2c81de48fc3d43328c2f09671f5fd52c",
+			"created": 1554206856355,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1554206856355,
+			"modified": 1554206856355,
+			"name": "Authors",
+			"parentId": "wrk_129aba7c254f4347a598ed03de74ef94",
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_79c4e0d3bb6147b2a74434a6da47b92b",
+			"created": 1554206917195,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1554206917195,
+			"modified": 1554206917195,
+			"name": "JWT Authentication",
+			"parentId": "wrk_129aba7c254f4347a598ed03de74ef94",
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_7351496ddb4a48fb989b15ecb97ae476",
+			"created": 1554206925796,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1554206925796,
+			"modified": 1554206925796,
+			"name": "Users",
+			"parentId": "wrk_129aba7c254f4347a598ed03de74ef94",
+			"_type": "request_group"
+		},
+		{
+			"_id": "env_3dba8e8728ef406aa3f025a8564e9ad2",
+			"color": "#2ee3af",
+			"created": 1554207410503,
+			"data": {
+				"base_url": "127.0.0.1:8080"
+			},
+			"isPrivate": false,
+			"metaSortKey": 1554207410503,
+			"modified": 1554207544507,
+			"name": "local",
+			"parentId": "env_32501ba47264419c829a6c1d3e8fe73b",
+			"_type": "environment"
+		},
+		{
+			"_id": "req_49396bc672ca4e81bf58e68d11e5868c",
+			"authentication": {
+				"prefix": "Token",
+				"token": "{% response 'body', 'req_652af48859324f398f311603c22ef7a8', '$.token' %}",
+				"type": "bearer"
+			},
+			"body": {},
+			"created": 1554208588547,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1554208588547,
+			"method": "GET",
+			"modified": 1554208662616,
+			"name": "List",
+			"parameters": [],
+			"parentId": "fld_3240de0d0f144efb8464f15c7a56fa55",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://{{ base_url  }}/api/v1/books/",
+			"_type": "request"
+		},
+		{
+			"_id": "req_d56189fddcde4c49833661b64ecf8cfe",
+			"authentication": {
+				"prefix": "Token",
+				"token": "{% response 'body', 'req_652af48859324f398f311603c22ef7a8', '$.token' %}",
+				"type": "bearer"
+			},
+			"body": {},
+			"created": 1554208525114,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1554208525114,
+			"method": "GET",
+			"modified": 1554208574417,
+			"name": "List",
+			"parameters": [],
+			"parentId": "fld_c3162e3e1eea43c7974fc1894126fa42",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://{{ base_url  }}/api/v1/publishers/",
+			"_type": "request"
+		},
+		{
+			"_id": "req_b6220ab1a4014edd95ec18f2a33f659d",
+			"authentication": {
+				"prefix": "Token",
+				"token": "{% response 'body', 'req_652af48859324f398f311603c22ef7a8', '$.token' %}",
+				"type": "bearer"
+			},
+			"body": {},
+			"created": 1554207973511,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1554207973511,
+			"method": "GET",
+			"modified": 1554208500800,
+			"name": "List",
+			"parameters": [],
+			"parentId": "fld_2c81de48fc3d43328c2f09671f5fd52c",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://{{ base_url  }}/api/v1/authors/",
+			"_type": "request"
+		},
+		{
+			"_id": "req_652af48859324f398f311603c22ef7a8",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"username\": \"admin\",\n\t\"password\": \"password\"\n}"
+			},
+			"created": 1554206942243,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_cbb5ce4abf0e4cfc9f02f4de59c7e39b",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1554206942243,
+			"method": "POST",
+			"modified": 1554208455412,
+			"name": "Obtain Token",
+			"parameters": [
+				{
+					"id": "pair_c9c7d49b581b4ad792d67f7933e30bc7",
+					"name": "",
+					"value": ""
+				}
+			],
+			"parentId": "fld_79c4e0d3bb6147b2a74434a6da47b92b",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://{{ base_url  }}/api/v1/auth/jwt/token/obtain/",
+			"_type": "request"
+		}
+	]
+}
