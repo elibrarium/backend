@@ -49,6 +49,7 @@ LOCAL_APPS = [
 INSTALLED_APPS = BASE_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware',
@@ -151,3 +152,9 @@ JWT_AUTH = {
     "JWT_AUTH_HEADER_PREFIX": "Token",
     "JWT_ALLOW_REFRESH": True,
 }
+
+
+CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_WHITELIST = (
+    "localhost:8383",
+)
