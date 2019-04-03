@@ -1,3 +1,4 @@
 *.sw[a-z]
 *.py[a-z]
 .env/
+**/db.sqlite3
