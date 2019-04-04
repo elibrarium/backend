@@ -1,3 +1,5 @@
+from django.contrib.auth import get_user_model
+
 from rest_framework import serializers
 
 from .models import Book
@@ -24,3 +26,10 @@ class PublisherSerializer(serializers.ModelSerializer):
         model = Publisher
         fields = '__all__'
         read_only_fields = ('created', 'updated',)
+
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = get_user_model()
+        exclude = ('password',)
+        read_only_fields = ('last_login',)

@@ -3,16 +3,18 @@ from django.urls import path
 from rest_framework import routers
 from rest_framework_jwt import views as jwt_views
 
-from .views import BookModelViewSet
-from .views import AuthorModelViewSet
-from .views import PublisherModelViewSet
+from .views import UsersModelViewSet
+from .views import BooksModelViewSet
+from .views import AuthorsModelViewSet
+from .views import PublishersModelViewSet
 
 
 router = routers.DefaultRouter()
 
-router.register(r'books', BookModelViewSet)
-router.register(r'authors', AuthorModelViewSet)
-router.register(r'publishers', PublisherModelViewSet)
+router.register(r'users', UsersModelViewSet)
+router.register(r'books', BooksModelViewSet)
+router.register(r'authors', AuthorsModelViewSet)
+router.register(r'publishers', PublishersModelViewSet)
 
 urlpatterns = router.urls
 
