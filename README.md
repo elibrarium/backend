@@ -1,11 +1,17 @@
 # Outline
 
+- About project
 - What are prerequisites?
 - How to setup development environment?
 - How to run backend server?
 - How to test? 
 - Thoguths on deployment
 - Lincese
+
+## About project
+
+This is library application for organizing EBooks.
+Current repository contains backend part implemented using Django framework.
 
 ## Prerequisites
     - Ubuntu 16.04.1 LTS
